@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Hp-Printer-Support",
+  title: "Printer-Support",
   description: "Printer-Support",
 };
 
