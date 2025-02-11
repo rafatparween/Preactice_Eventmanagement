@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Button, Grid, Card, CardContent } from "@mui/material";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -133,7 +133,7 @@ const Contact = () => {
                     </Typography>
                     <Button
                       component={Link}
-                      to="/events"
+                      href="/events"
                       variant="contained"
                       sx={{
                         backgroundColor: "#e5097f",
@@ -256,7 +256,7 @@ const Contact = () => {
           </Typography>
           <Button
             component={Link}
-            to="/contact"
+            href="/contact"
             variant="contained"
             sx={{
               backgroundColor: "white",
@@ -286,4 +286,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
