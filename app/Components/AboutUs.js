@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const AboutUs = () => {
   return ( 
@@ -17,9 +18,11 @@ const AboutUs = () => {
         {/* Image Container */}
         <div className="relative w-full md:w-1/2">
           <div className="relative p-4 bg-gradient-to-br from-purple-800 via-blue-800 to-gray-800 rounded-xl overflow-hidden rounded-xl overflow-visible h-[400px] w-[550px] pl-8 pt-8 pr-0 ml-[300px] 2xl:ml-[419px]">
-            <img
+            <Image
               src="/aboutus.jpg"
               alt="Team working"
+              height={410}
+              width={564}
               className="w-[564px] h-[410px] object-cover rounded-xl md:-mr-20"
             />
           </div>
@@ -33,9 +36,11 @@ const AboutUs = () => {
                 ></div>
               ))}
             </div> */}
-            <img
+            <Image
               src="/dot.png"
               alt="Team working"
+              width={33}
+              height={100}
               className='h-[100px] w-[33px] 2xl:ml-[513px]'
             />
           </div>

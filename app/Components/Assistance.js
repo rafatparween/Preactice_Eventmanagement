@@ -1,3 +1,4 @@
+import Image from 'next/image';
 function Assistance(){
     return(
         <>
@@ -102,7 +103,7 @@ function Assistance(){
                         </div>
                     </div>
                 </div>
-                <img src="https://geekautobuzz.com/wp-content/uploads/2024/09/comp-1.png"/>
+                {/* <img src="https://geekautobuzz.com/wp-content/uploads/2024/09/comp-1.png"/> */}
         </>
     )
 }

@@ -1,10 +1,10 @@
-
+import Image from "next/image";
 export default function Avoid() {
   return (
     <div className="bg-[#dbe8f0] flex justify-between items-center px-6 py-8">
       {/* Left Image Section */}
       <div className="w-1/2">
-        <img
+        <Image
           src="https://t3.ftcdn.net/jpg/01/29/04/10/360_F_129041088_2oiesPtf5kZF9y2thvHHzXvqiGhhmouf.jpg" // Use a placeholder image or the actual image path here
           alt="Pocket Empty"
           width={598} 

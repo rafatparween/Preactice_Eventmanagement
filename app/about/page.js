@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
 import Link from "next/link";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -99,7 +100,7 @@ const About = () => {
                 overflow: "hidden", // Ensures the image stays within the box
               }}
             >
-              <img
+              <Image
                 src="https://eventsmanagementkerala.com/wp-content/uploads/2023/02/blog-2.27e5a04.webp"
                 alt="About Us Image"
                 style={{
