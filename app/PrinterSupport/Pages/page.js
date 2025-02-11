@@ -362,11 +362,11 @@ function Home() {
 
           <div className=" inset-0 opacity-80"></div>
           <div className="relative z-10 text-white  2xl:ml-[-825px] xl:ml-[-567px] 2xl:mt-[28px] xl:mt-[-5px]  ">
-            <h1 className="text-4xl font-hp-simplified text-[44px] xl:text-[50px] 2xl:text-[56px] xl:ml-[32px] 2xl:ml-[157px] mx-4 sm:mx-8 md:mx-12">
+            <h1 className="text-4xl font-hp-simplified text-[44px] xl:text-[50px] 2xl:text-[56px] xl:ml-[-3px] 2xl:ml-[111px] mx-4 sm:mx-8 md:mx-12">
               Get started with your Printer
             </h1>
 
-            <p className="mt-[35px] text-[24px] xl:text-[28px] 2xl:text-[32px] xl:ml-[317px] 2xl:ml-[500px] mx-4 sm:mx-8 md:mx-12">
+            <p className="mt-[35px] text-[24px] xl:text-[28px] 2xl:text-[34px] xl:ml-[267px] 2xl:ml-[500px] mx-4 sm:mx-8 md:mx-12">
               Enter your Printer name and model number for Printer Setup Installation
             </p>
 
@@ -392,7 +392,7 @@ function Home() {
 
             {/* Dropdown for filtered models */}
             {filteredModels.length > 0 && (
-              <ul className="absolute left-0 mt-1 w-full max-w-lg bg-white border border-gray-300 rounded-lg shadow-lg z-10 2xl:ml-[499px] xl:ml-[319px] text-black">
+              <ul className="absolute left-0 mt-1 w-full max-w-lg bg-white border border-gray-300 rounded-lg shadow-lg z-10 2xl:ml-[499px] xl:ml-[268px] text-black">
                 {filteredModels.map((model) => (
                   <li
                     key={model}
