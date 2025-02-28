@@ -321,7 +321,7 @@ function Printersearch() {
       {isPopupVisible && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
           <div className="bg-white w-[596px] h-[443px] rounded-lg shadow-lg p-6 flex flex-col justify-center items-center">
-            <h2 className="text-[28px] font-semibold mb-4">Gathering device details...</h2>
+            <h2 className="text-[28px] font-semibold mb-4 text-black font-bold">Gathering device details...</h2>
             {/* <svg
               className="animate-spin duration-[15s] h-[40px]" // Spinner rotates for 15 seconds
               xmlns="http://www.w3.org/2000/svg"
@@ -380,7 +380,7 @@ function Printersearch() {
         </div>
 
         {/* Bottom Text */}
-        <p className="mt-6 text-[#212529] text-[21px] font-bold">
+        <p className="mt-6 text-black text-[21px] font-bold ">
           Please wait... Driver and software installing
         </p>
       </div>

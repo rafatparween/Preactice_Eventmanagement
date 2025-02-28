@@ -5,7 +5,7 @@ import Image from 'next/image';
 const NavbarSection = () => {
   return (
     <header className="bg-white py-2 h-[72px] ">
-      <div className="container mx-auto flex items-center 2xl:ml-[179px] xl:ml-[179px]">
+      <div className="container mx-auto flex items-center 2xl:ml-[182px] xl:ml-[161px]">
         {/* HP Logo */}
         <div className="flex items-center mr-4 xl:ml-[-60px] 2xl:ml-[2px]">
           <Image
