@@ -23,7 +23,7 @@ const Chatlink = () => {
   );
 }
 
-const CustomNavbar = () => {
+const Navbar = () => {
   return (
     <nav className="bg-white h-[40px]">
       <div className="flex gap-5 items-center py-3 justify-between bg-white">
@@ -49,4 +49,4 @@ const CustomNavbar = () => {
   );
 };
 
-export default CustomNavbar;
+export default Navbar;

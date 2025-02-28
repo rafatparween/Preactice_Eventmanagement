@@ -279,9 +279,11 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import JivoChat from '@/app/Jivochat';
 
-import NavbarSection from '@/app/Components/NavbarSection';
+
 import FooterSection from '@/app/Components/FooterSection';
+import NavbarSection from '@/app/Components/NavbarSection';
 import Popup from '@/app/Components/Popup';
+
 
 
 function Home() {
@@ -342,33 +344,26 @@ function Home() {
 
   return (
     <>
-      <div className='bg-white' >
       <NavbarSection/>
-      
-      <div className="h-[530px] mt-[13px] ">
-        <section
-          className="relative flex flex-col justify-center items-center text-center py-12 h-[450px] bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/background.jpg')"
-          }}
-        >
-          {/* Overlay div for background color */}
-          <div className="absolute inset-0 bg-[#007DBA] opacity-60"></div>
+      <div className="h-[530px] ">
+      <section
+  className="relative flex flex-col justify-center items-center text-center py-12 h-[530px] bg-cover bg-center"
+  style={{
+    backgroundImage: "url('/topback.png')"
+  }}
+>
+  {/* Overlay div for background color */}
+  {/* <div className="absolute inset-0 bg-[#007DBA] opacity-60"></div> */}
 
-          {/* Content of the section */}
-          <div className="relative z-10">
-            {/* <h1 className="text-white">Your Content Here</h1> */}
-          </div>
+  {/* Content of the section */}
+  <div className="relative z-10">
+    {/* <h1 className="text-white">Your Content Here</h1> */}
+  </div>
 
           <div className=" inset-0 opacity-80"></div>
-          <div className="relative z-10 text-white  2xl:ml-[-825px] xl:ml-[-567px] 2xl:mt-[28px] xl:mt-[-5px]  ">
-            <h1 className="text-4xl font-hp-simplified text-[44px] xl:text-[50px] 2xl:text-[56px] xl:ml-[-3px] 2xl:ml-[111px] mx-4 sm:mx-8 md:mx-12">
-              Get started with your Printer
-            </h1>
-
-            <p className="mt-[35px] text-[24px] xl:text-[28px] 2xl:text-[34px] xl:ml-[267px] 2xl:ml-[500px] mx-4 sm:mx-8 md:mx-12">
-              Enter your Printer name and model number for Printer Setup Installation
-            </p>
+          <div className="relative z-10 text-white 2xl:mt-[117px] xl:mt-[165px] 2xl:ml-[-825px] xl:ml-[-567px]  ">
+            <h1 className="text-4xl font-hp-simplified text-[44px] 2xl:ml-[12px] xl:ml-[-11px]">Get started with your HP printer</h1>
+            <p className="mt-[35px] text-[24px] xl:ml-[281px] 2xl:ml-[314px]">Enter your printer name and model number to get the right HP software and drivers.</p>
 
             {/* Input Section */}
             <div className="mt-8 flex space-x-4 justify-center">
@@ -376,7 +371,7 @@ function Home() {
                 type="text"
                 value={searchTerm}
                 onChange={handleSearchChange}
-                placeholder="Enter your product name here.For example: 'OfficeJet 9010'"
+                placeholder="Enter your product name here. For example: 'OfficeJet 9010'"
                 className="px-4 py-2 w-full max-w-lg rounded-md text-gray-700 2xl:ml-[22px] xl:ml-[-19px]"
               />
               <button
@@ -392,15 +387,15 @@ function Home() {
 
             {/* Dropdown for filtered models */}
             {filteredModels.length > 0 && (
-              <ul className="absolute left-0 mt-1 w-full max-w-lg bg-white border border-gray-300 rounded-lg shadow-lg z-10 2xl:ml-[499px] xl:ml-[268px] text-black">
+              <ul className="absolute left-0 mt-1 w-full max-w-lg bg-white border border-gray-300 rounded-lg shadow-lg z-10 2xl:ml-[314px] xl:ml-[277px] text-black">
                 {filteredModels.map((model) => (
                   <li
                     key={model}
                     onClick={() => handleModelClick(model)} // Set model on click
                     className="cursor-pointer p-2 hover:bg-[#007DBA] hover:text-white"
                   >
-                    <span className="font-bold text-black">HP</span>
-                    {model.substring(2)} {/* Display the rest of the model name */}
+                     <span className="font-bold text-black">HP</span>
+                     {model.substring(2)} {/* Display the rest of the model name */}
                   </li>
                 ))}
               </ul>
@@ -414,13 +409,13 @@ function Home() {
 
 
           <div className="flex justify-end  ">
-            {/* <img
-              src="/setup.png"
+            <Image
+              src="/systemhp.png"
               alt="Printer setup devices"
-              width={403}
+              width={350}
               height={196}
-              className="object-contain 2xl:ml-[893px] 2xl:mt-[-46px] xl:mt-[-21px] xl:ml-[631px] 2xl:mt-[-43px] xl:mt-[-92px]"
-            /> */}
+              className="object-contain 2xl:ml-[893px] 2xl:mt-[60px] xl:mt-[86px] xl:ml-[631px]"
+            />
           </div>
 
         </section>
@@ -431,17 +426,9 @@ function Home() {
             <path fillRule="evenodd" clipRule="evenodd" d="M12.0002 3C9.02492 3 6.55542 5.16567 6.08209 8.00667C6.31929 8.04573 6.50024 8.25173 6.50024 8.5V11.5C6.50024 11.7761 6.27639 12 6.00024 12H5.00024C4.7241 12 4.50024 11.7761 4.50024 11.5V8.5C4.50024 8.22386 4.7241 8 5.00024 8H5.07113C5.55636 4.60771 8.47377 2 12.0002 2C15.5267 2 18.4441 4.60771 18.9294 8H19.0002C19.2764 8 19.5002 8.22386 19.5002 8.5V11.5C19.5002 11.7761 19.2764 12 19.0002 12C19.0002 13.1046 18.1048 14 17.0002 14H14.5002C14.5002 14.2761 14.2764 14.5 14.0002 14.5H13.0002C12.7241 14.5 12.5002 14.2761 12.5002 14V13C12.5002 12.7239 12.7241 12.5 13.0002 12.5H14.0002C14.2764 12.5 14.5002 12.7239 14.5002 13H17.0002C17.5525 13 18.0002 12.5523 18.0002 12C17.7241 12 17.5002 11.7761 17.5002 11.5V8.5C17.5002 8.25173 17.6812 8.04573 17.9184 8.00667C17.4451 5.16567 14.9756 3 12.0002 3Z" fill="#212121" />
           </svg>
           <h1 className='text-[#737373] ml-[10px]'>
-            Need additional help with setup? Printer <span className='underline' style={{ color: '#007DBA' }}>Support</span>
+            Need additional help with setup? Visit <span className='underline' style={{ color: '#007DBA' }}>HP Support</span>
           </h1>
         </div>
-        <div className="flex items-center 2xl:ml-[188px] xl:ml-[130px] mt-[20px]">
-          <Image src="/smallprinter.jpg" alt="United States"
-            height={30}
-            width={30}
-            className="mr-2" />
-          <h1 className="text-lg text-[#007DBA] underline">Easily install Printer and drivers on all your computers</h1>
-        </div>
-
         <div className="flex items-center 2xl:ml-[193px] 2xl:mt-[59px] xl:ml-[130px] xl:mt-[63px]">
           <Image src="/unitedlogo.png" alt="United States"
             height={50}
@@ -456,9 +443,7 @@ function Home() {
 
       </div>
       <FooterSection/>
-      
-      <JivoChat />
-      </div>
+      <JivoChat/>
 
     </>
   );

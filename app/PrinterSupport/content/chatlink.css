@@ -1,5 +1,5 @@
 .header {
-    background-color: white;
+    background-color: #fff;
     padding: 0px 15px;
     text-align: right;
     height: 71px;
@@ -11,10 +11,9 @@
 .chat-now {
     font-size: 30px;
     color: #1c85c1;
-    margin-top: -59px;
     cursor: pointer;
-    /* position: relative; */
-   
+    position: relative;
+    display: inline-block;
 }
 
 .chat-now i {

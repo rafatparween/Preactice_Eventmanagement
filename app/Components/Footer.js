@@ -1,142 +1,85 @@
-import React from "react";
-import { Box, Grid, Typography, Link, IconButton } from "@mui/material";
-import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
+'use client';
+
+import Link from 'next/link';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
-  return (
-    <Box
-      sx={{
-        backgroundColor: "black",
-        color: "white",
-        py: 4,
-        px: 2,
-        backgroundImage: "url('/path-to-your-background-image.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        opacity: 0.9,
-      }}
-    >
-      <Grid container spacing={4}>
-        {/* Left Section */}
-        <Grid item xs={12} md={6}>
-          <Typography variant="h6" gutterBottom>
-            Event Management
-          </Typography>
-          <Typography variant="body2" sx={{ lineHeight: 1.8 }}>
-          Event Management is an ISO 9001:2015 Certified Event Management Company based in Kerala, India, specializing in organizing a wide range of events. Whether it's a corporate function, wedding, party, or a large-scale conference, we take care of every detail to ensure your event is flawless. Our experienced team offers end-to-end event solutions, including conceptualization, planning, execution, and post-event support.
+    return (
+        <footer className="text-white py-20 bg-gray-800 h-[400px] pt-[14px]">
+            <div className="container mx-auto px-20 lg:px-20 py-20 flex flex-col gap-10 md:flex-row justify-between border-t border-slate-800">
+                <div className="flex">
+                    <div className="font-bold text-center">
+                        <h1 className="text-[32px] mt-[89px]">Micro-Sonic</h1>
+                    </div>
+                </div>
 
-We offer personalized services tailored to your specific needs and budget, ensuring that every moment is thoughtfully crafted. Our goal is to provide innovative and creative ideas, smooth logistics, and seamless coordination, making your event truly memorable and stress-free. From venue selection and décor to catering, entertainment, and more, Melodia Event Management is here to bring your vision to life.
-          </Typography>
-          <Box sx={{ mt: 2 }}>
-            <IconButton color="inherit">
-              <Instagram />
-            </IconButton>
-            <IconButton color="inherit">
-              <Facebook />
-            </IconButton>
-            <IconButton color="inherit">
-              <LinkedIn />
-            </IconButton>
-            <IconButton color="inherit">
-              <Twitter />
-            </IconButton>
-          </Box>
-        </Grid>
+                <div>
+                    <p>Let us help</p>
+                    <div className="flex flex-col text-start mb-4 md:mb-0">
+                        {[
+                            { name: 'Home', path: '/' },
+                            { name: 'About us', path: '/about' },
+                            { name: 'Contact us', path: '/contact' },
+                            { name: 'Services', path: '/' },
+                            { name: 'Disclaimer', path: '/disclaimer' }
+                        ].map(({ name, path }) => (
+                            <Link
+                                key={name}
+                                href={path}
+                                className="block md:inline-block py-2 hover:text-gray-500"
+                            >
+                                {name}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
 
-        {/* Quick Links */}
-        <Grid item xs={12} sm={6} md={2}>
-          <Typography variant="h6" gutterBottom>
-            Quick Links
-          </Typography>
-          <Link href="#" color="inherit" underline="none" display="block">
-            Home
-          </Link>
-          <Link href="/about" color="inherit" underline="none" display="block">
-            About
-          </Link>
-          <Link href="/privacy" color="inherit" underline="none" display="block">
-            Privacy
-          </Link>
-           <Link href="policy" color="inherit" underline="none" display="block">
-          
-            Policy
-          </Link>
-          <Link href="/term&condition" color="inherit" underline="none" display="block">
-            Term & Condition
-          </Link>
-          <Link href="/Disclaimer" color="inherit" underline="none" display="block">
-          Disclaimer
-          </Link>
-          
-        </Grid>
+                <div>
+                    <div className="flex flex-col text-start mb-4 md:mb-0 text-[14px]">
+                        {[
+                            { name: 'Terms and Conditions', path: '/term' },
+                            { name: 'Privacy Policy', path: '/policy' },
+                            { name: 'License Agreement', path: '/license-agreement' },
+                            { name: 'Copyright Information', path: '/copyright-information' },
+                            { name: 'Cookies Policy', path: '/cookies-policy' }
+                        ].map(({ name, path }) => (
+                            <Link
+                                key={name}
+                                href={path}
+                                className="block md:inline-block py-2 hover:text-gray-500"
+                            >
+                                {name}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
 
-        {/* Services */}
-        <Grid item xs={12} sm={6} md={2}>
-          <Typography variant="h6" gutterBottom>
-            Services
-          </Typography>
-          <Link href="#" color="inherit" underline="none" display="block">
-            Corporate Events
-          </Link>
-          <Link href="#" color="inherit" underline="none" display="block">
-            Wedding Planner
-          </Link>
-          <Link href="#" color="inherit" underline="none" display="block">
-            Music & Entertainment
-          </Link>
-          <Link href="#" color="inherit" underline="none" display="block">
-            Private Parties
-          </Link>
-          <Link href="#" color="inherit" underline="none" display="block">
-            Destination Wedding
-          </Link>
-        </Grid>
+                <div className="flex flex-col">
+                    <p>SOCIAL MEDIA</p>
+                    <div className="flex mt-4 gap-3">
+                        {[
+                            { icon: FaFacebook, bgColor: 'bg-blue-600', link: '#' },
+                            { icon: FaInstagram, bgColor: 'bg-pink-600', link: '#' },
+                            { icon: FaTwitter, bgColor: 'bg-blue-600', link: '#' },
+                            { icon: FaYoutube, bgColor: 'bg-red-600', link: '#' }
+                        ].map(({ icon: Icon, bgColor, link }, index) => (
+                            <a
+                                key={index}
+                                href={link}
+                                className={`${bgColor} p-1.5 rounded-sm text-white hover:text-gray-500 hover:scale-110`}
+                            >
+                                <Icon size={18} />
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
-        {/* Contact Info */}
-        <Grid item xs={12} sm={6} md={2}>
-          <Typography variant="h6" gutterBottom>
-            Contact Info
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            Melodia Event Management, T V Center,
-            <br />
-            Kakkanad, Kochi, Kerala 682037
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            Melodia Event Management, Flamon Complex,
-            <br />
-            Main Rd, Kuriachira, Thrissur, Kerala 680006
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            Melodia Event Management, Door No:VP
-            <br />
-            22/152ABC, Vazhakkad Panchayath, Oorkadavu,
-            <br />
-            Po, Aakkod, Kozhikode, Kerala 673640
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            +91-859-001-0011
-          </Typography>
-          <Typography variant="body2">
-            melodiaeventmanagement@gmail.com
-          </Typography>
-        </Grid>
-      </Grid>
-
-      <Typography
-        variant="body2"
-        sx={{
-          mt: 4,
-          textAlign: "center",
-          borderTop: "1px solid white",
-          pt: 2,
-        }}
-      >
-        © 2008–2025 ijstartprinter. All Rights Reserved.
-      </Typography>
-    </Box>
-  );
+            <div className="flex items-center justify-center py-10 mt-[-103px]">
+                <span className="text-gray-400 leading-10">© Copyright, All Rights Reserved by micro-sonic.online </span>
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;

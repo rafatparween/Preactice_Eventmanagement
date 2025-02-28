@@ -48,7 +48,7 @@
   
 
 
-import Image from "next/image";
+
 export default function Solutions() {
   return (
     <div className="bg-[#e2efff] p-8 sm:p-6 md:p-8 lg:p-10 xl:p-12">
@@ -62,11 +62,9 @@ export default function Solutions() {
       <div className="flex flex-col sm:flex-row sm:justify-center space-y-8 sm:space-y-0 sm:space-x-8 md:space-x-12 lg:space-x-16">
         {/* First Column */}
         <div className="flex flex-col items-center">
-          <Image
-            src="/section.png"
+          <img
+            src="https://qwebcare.com/help/images/support.png"
             alt="Solution 1"
-            height={60}
-            width={120}
             className="w-[120px] sm:w-[140px] md:w-[162px] h-auto mb-4"
           />
           <h4 className="text-[#1c85c1] text-[20px] sm:text-[24px] md:text-[28px] mb-1 text-center">
@@ -81,13 +79,11 @@ export default function Solutions() {
         </div>
 
         {/* Second Column */}
-        <div className="flex flex-col items-center mt-[58px]">
-          <Image
-            src="/section2.png"
+        <div className="flex flex-col items-center">
+          <img 
+            src="https://qwebcare.com/help/images/save.png"
             alt="Solution 2"
-            height={60}
-            width={120}
-            className="w-[120px] sm:w-[140px] md:w-[162px] h-auto mb-4 mt-[56px]"
+            className="w-[120px] sm:w-[140px] md:w-[162px] h-auto mb-4"
           />
           <h3 className="text-[#1c85c1] text-[20px] sm:text-[24px] md:text-[28px] mb-1 text-center">
             Solution’s for the Driver Download & Installation

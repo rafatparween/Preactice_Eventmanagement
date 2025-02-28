@@ -11,18 +11,6 @@ const FooterSection = () => {
         <div>
           <ul>
             <li className="mb-2 text-white font-semibold">About Us</li>
-            <li>
-          <Link legacyBehavior href="/privacy">
-              <a className="mb-5 hover:text-gray-400 cursor-pointer">Privacy of Company</a>
-
-            </Link> 
-            <li>
-            <Link legacyBehavior href="/policy">
-              <a className="mb-2 hover:text-gray-400 cursor-pointer">Policy of company</a>
-
-            </Link> 
-            </li>
-            </li>
             <li className="mb-2 hover:text-gray-400 cursor-pointer">Contact Printer</li>
             <li className="mb-2 hover:text-gray-400 cursor-pointer">Careers</li>
             <li className="mb-2 hover:text-gray-400 cursor-pointer">Investor relations</li>
@@ -30,8 +18,8 @@ const FooterSection = () => {
             <li className="mb-2 hover:text-gray-400 cursor-pointer">Diversity, Equity and Inclusion</li>
             <li className="mb-2 hover:text-gray-400 cursor-pointer">Press center</li>
             <li className="mb-2 hover:text-gray-400 cursor-pointer">The Garage</li>
-            {/* <li className="mb-2 hover:text-gray-400 cursor-pointer">Printer Store Newsletter</li>
-            <li className="mb-2 hover:text-gray-400 cursor-pointer">Printer Printables Newsletter</li> */}
+            <li className="mb-2 hover:text-gray-400 cursor-pointer">Printer Store Newsletter</li>
+            <li className="mb-2 hover:text-gray-400 cursor-pointer">Printer Printables Newsletter</li>
           </ul>
         </div>
 
@@ -50,17 +38,21 @@ const FooterSection = () => {
         {/* Third Column */}
         <div>
           <ul>
-           
-         
-          
-          
-            <Link legacyBehavior href="/term&condition">
-              <a className="mb-2 hover:text-gray-400 cursor-pointer">Terms & Conditions</a>
+            <li className="mb-2 text-white font-semibold">Support</li>
+            <Link legacyBehavior href="/about">
+              <a className="mb-3 hover:text-gray-400 cursor-pointer">About</a>
             </Link> 
-            <br className='mb-[2px]'/>
-          
-            <Link legacyBehavior href="/Disclaimer">
+            <br/>
+            <Link legacyBehavior href="/privacyPolicy">
+              <a className="mb-2 hover:text-gray-400 cursor-pointer">Privacy Policy</a>
+            </Link> 
+            <br/>
+            <Link legacyBehavior href="/disclaimer">
               <a className="mb-2 hover:text-gray-400 cursor-pointer">Disclaimer</a>
+            </Link> 
+            <br/>
+            <Link legacyBehavior href="/termsConditions">
+              <a className="mb-2 hover:text-gray-400 cursor-pointer">Terms &Conditions</a>
             </Link> 
             <li className="mb-2 hover:text-gray-400 cursor-pointer">Support & troubleshooting</li>
             <li className="mb-2 hover:text-gray-400 cursor-pointer">Download drivers</li>
@@ -87,35 +79,55 @@ const FooterSection = () => {
           <ul>
             <li className="mb-2 text-white font-semibold">Stay connected</li>
             <div className="flex space-x-4">
-              <a href="/" className="text-white hover:text-gray-400 text-3xl">
+              <a href="#" className="text-white hover:text-gray-400 text-3xl">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href="/" className="text-white hover:text-gray-400 text-3xl">
+              <a href="#" className="text-white hover:text-gray-400 text-3xl">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="/" className="text-white hover:text-gray-400 text-3xl">
+              <a href="#" className="text-white hover:text-gray-400 text-3xl">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="/" className="text-white hover:text-gray-400 text-3xl">
+              <a href="#" className="text-white hover:text-gray-400 text-3xl">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="/" className="text-white hover:text-gray-400 text-3xl">
+              <a href="#" className="text-white hover:text-gray-400 text-3xl">
                 <FontAwesomeIcon icon={faYoutube} />
               </a>
-              <a href="/" className="text-white hover:text-gray-400 text-3xl">
+              <a href="#" className="text-white hover:text-gray-400 text-3xl">
                 <FontAwesomeIcon icon={faTiktok} />
               </a>
             </div>
           </ul>
+          {/* <p className="text-center md:text-left">&copy;2024 HP Development Company, L.P. All rights reserved. The information contained herein is subject to change without notice.</p> */}
         </div>
       </div>
+
+      {/* Lower part with terms and conditions */}
+      {/* <div className="border-t border-gray-600 py-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between text-xs text-gray-400">
+          <div className="flex flex-wrap space-x-2 mb-2 md:mb-0">
+            <a href="#" className="hover:text-white">Recalls</a>
+            <a href="#" className="hover:text-white">Product recycling</a>
+            <a href="#" className="hover:text-white">Accessibility</a>
+            <a href="#" className="hover:text-white">CA Supply Chains Act</a>
+            <a href="#" className="hover:text-white">Privacy</a>
+            <a href="#" className="hover:text-white">Use of cookies</a>
+            <a href="#" className="hover:text-white">Your privacy choices</a>
+            <a href="#" className="hover:text-white">Terms of use</a>
+            <a href="#" className="hover:text-white">Limited warranty statement</a>
+            <a href="#" className="hover:text-white">Terms & conditions of sales & service</a>
+          </div>
+          <p className="text-center md:text-left">&copy;2024 HP Development Company, L.P. The information contained herein is subject to change without notice.</p>
+        </div>
+      </div> */}
       <div className="border-t border-gray-600 py-4 text-center">
         <p className="text-xs text-gray-400">
-        © Copyright, All Rights Reserved by ijstartprinter.online
+        © Copyright, All Rights Reserved by printersolutiononline
         </p>
       </div>
     </footer>
   );
 };
 
-export default FooterSection;
+export default FooterSection

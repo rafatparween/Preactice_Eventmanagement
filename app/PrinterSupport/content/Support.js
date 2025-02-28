@@ -4,8 +4,7 @@ import './Support.css';
 const Support = () => {
   return (
     <section className="support">
-      <div className='bg-white'>
-      <h2 >Instant Solution On Live Chat</h2>
+      <h2>Instant Solution On Live Chat</h2>
       <div className="support-options">
         <div className="support-option">
           <span className="fas fa-headphones"></span> {/* Headphone icon */}
@@ -19,7 +18,6 @@ const Support = () => {
           <span className="fas fa-tools"></span> {/* Tools icon */}
           <p>Diagnose & Fix</p>
         </div>
-      </div>
       </div>
     </section>
   );
