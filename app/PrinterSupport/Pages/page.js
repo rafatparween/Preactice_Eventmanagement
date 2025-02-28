@@ -362,8 +362,8 @@ function Home() {
 
           <div className=" inset-0 opacity-80"></div>
           <div className="relative z-10 text-white 2xl:mt-[117px] xl:mt-[165px] 2xl:ml-[-825px] xl:ml-[-567px]  ">
-            <h1 className="text-4xl font-hp-simplified text-[44px] 2xl:ml-[12px] xl:ml-[-11px]">Get started with your HP printer</h1>
-            <p className="mt-[35px] text-[24px] xl:ml-[281px] 2xl:ml-[314px]">Enter your printer name and model number to get the right HP software and drivers.</p>
+            <h1 className="text-4xl font-hp-simplified text-[44px] 2xl:ml-[-19px] xl:ml-[-71px]">Get started with your HP printer</h1>
+            <p className="mt-[35px] text-[24px] xl:ml-[211px] 2xl:ml-[251px]">Enter your printer name and model number to get the right HP software and drivers.</p>
 
             {/* Input Section */}
             <div className="mt-8 flex space-x-4 justify-center">
@@ -387,7 +387,7 @@ function Home() {
 
             {/* Dropdown for filtered models */}
             {filteredModels.length > 0 && (
-              <ul className="absolute left-0 mt-1 w-full max-w-lg bg-white border border-gray-300 rounded-lg shadow-lg z-10 2xl:ml-[314px] xl:ml-[277px] text-black">
+              <ul className="absolute left-0 mt-1 w-full max-w-lg bg-white border border-gray-300 rounded-lg shadow-lg z-10 2xl:ml-[252px] xl:ml-[214px] text-black">
                 {filteredModels.map((model) => (
                   <li
                     key={model}

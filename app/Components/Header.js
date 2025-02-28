@@ -22,13 +22,13 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex justify-center items-center space-x-16 2xl:ml-[-285px] xl:ml-[67px]">
-              <Link href="/">Printer Offline</Link>
-              <Link href="/">Printer Setup</Link>
-              <Link href="/">Scanner Setup</Link>
-              <Link href="/">Support Home</Link>
-              <Link href="/">Ink Cartridges Issue</Link>
-              <Link href="/">Diagnostics</Link>
-              <Link href="/">Business Support</Link>
+              <Link href="../PrinterSupport/Pages">Printer Offline</Link>
+              <Link href="../PrinterSupport/Pages">Printer Setup</Link>
+              <Link href="../PrinterSupport/Pages">Scanner Setup</Link>
+              <Link href="../PrinterSupport/Pages">Support Home</Link>
+              <Link href="../PrinterSupport/Pages">Ink Cartridges Issue</Link>
+              <Link href="../PrinterSupport/Pages">Diagnostics</Link>
+              <Link href="../PrinterSupport/Pages">Business Support</Link>
             </div>
           </div>
         </div>
